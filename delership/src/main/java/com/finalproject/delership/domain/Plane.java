@@ -1,5 +1,6 @@
 package com.finalproject.delership.domain;
 
+import com.finalproject.delership.domain.base.CreateModifyAwareBaseEntity;
 import com.finalproject.delership.enums.Status;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table
-public class Plane extends CreateModifyAwareBaseEntity{
+public class Plane extends CreateModifyAwareBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

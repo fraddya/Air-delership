@@ -1,5 +1,6 @@
 package com.finalproject.delership.domain;
 
+import com.finalproject.delership.domain.base.CreateModifyAwareBaseEntity;
 import com.finalproject.delership.enums.Status;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table
-public class Order extends CreateModifyAwareBaseEntity{
+public class Order extends CreateModifyAwareBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

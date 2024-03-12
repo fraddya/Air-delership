@@ -1,5 +1,6 @@
 package com.finalproject.delership.domain;
 
+import com.finalproject.delership.domain.base.CreateModifyAwareBaseEntity;
 import com.finalproject.delership.enums.GenderType;
 import com.finalproject.delership.enums.Status;
 import jakarta.persistence.*;
@@ -12,7 +13,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table
-public class Customer extends CreateModifyAwareBaseEntity{
+public class Customer extends CreateModifyAwareBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
