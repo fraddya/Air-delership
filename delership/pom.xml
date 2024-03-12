@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.3</version>
+		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.finalproject</groupId>
@@ -18,7 +18,7 @@
 		<java.version>17</java.version>
 		<org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
 		<lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
-		<spring-cloud.version>2023.0.0</spring-cloud.version>
+		<spring-cloud.version>2022.0.4</spring-cloud.version>
 		<apache-common-lang.version>3.12.0</apache-common-lang.version>
 		<querydsl.jpa.version>5.0.0</querydsl.jpa.version>
 		<querydsl.apt.version>5.0.0</querydsl.apt.version>
