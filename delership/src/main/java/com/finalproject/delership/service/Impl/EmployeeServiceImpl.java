@@ -8,6 +8,7 @@ import com.finalproject.delership.service.EmployeeService;
 import com.querydsl.core.BooleanBuilder;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -21,6 +22,7 @@ import java.util.Optional;
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
+    @Autowired
     private EmployeeRepository employeeRepository;
 
     @Override
