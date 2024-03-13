@@ -15,6 +15,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Slf4j
@@ -28,6 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee save(Employee employee) {
         employee.setStatus(Status.ACTIVE);
+        employee.setDateJoin(LocalDate.now().toString());
         return employeeRepository.save(employee);
     }
 
