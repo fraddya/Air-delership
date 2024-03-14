@@ -22,6 +22,7 @@ public class EmployeeSearchRequest extends BaseSearchRequest {
     private String religion;
     private String email;
     private String userLogging;
+    private String password;
     private Status status;
 
     private String sortProperty = "lastModifiedAt";

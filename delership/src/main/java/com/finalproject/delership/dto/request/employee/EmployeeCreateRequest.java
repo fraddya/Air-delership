@@ -33,5 +33,6 @@ public class EmployeeCreateRequest {
     private String religion;
     private String email;
     private String userLogging;
+    private String passWord;
     private Status status;
 }

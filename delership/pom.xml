@@ -142,6 +142,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>${jar.file.name}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

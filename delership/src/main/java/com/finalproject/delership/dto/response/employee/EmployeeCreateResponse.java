@@ -21,5 +21,6 @@ public class EmployeeCreateResponse {
     private String religion;
     private String email;
     private String userLogging;
+    private String passWord;
     private Status status;
 }
