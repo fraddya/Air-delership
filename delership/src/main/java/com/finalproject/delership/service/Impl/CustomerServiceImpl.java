@@ -1,6 +1,7 @@
 package com.finalproject.delership.service.Impl;
 
 import com.finalproject.delership.domain.Customer;
+import com.finalproject.delership.domain.base.ComplexValidationException;
 import com.finalproject.delership.domain.criteria.CustomerCriteria;
 import com.finalproject.delership.enums.Status;
 import com.finalproject.delership.repository.CustomerRepository;
@@ -8,6 +9,7 @@ import com.finalproject.delership.service.CustomerService;
 import com.querydsl.core.BooleanBuilder;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -21,6 +23,7 @@ import java.util.Optional;
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
 
+    @Autowired
     private CustomerRepository customerRepository;
 
 
@@ -51,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer retrieve(Long id) {
         return customerRepository.findById(id).orElseThrow(()->
-                new EntityNotFoundException(String.format("Customer id (%s) not found", id)));
+                new ComplexValidationException("Customer id (%s) not found", id.toString()));
     }
 
     @Override
@@ -85,7 +88,7 @@ public class CustomerServiceImpl implements CustomerService {
             }
             return customerRepository.save(customerPersisted.get());
         }else {
-            throw new EntityNotFoundException(String.format("Customer id (%s) not found", customerPersisted.get().getId()));
+            throw new ComplexValidationException("Customer id (%s) not found {}", customerPersisted.get().getId().toString());
         }
     }
 

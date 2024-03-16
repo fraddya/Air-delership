@@ -10,6 +10,7 @@ import com.finalproject.delership.dto.response.employee.EmployeeCreateResponse;
 import com.finalproject.delership.dto.response.employee.EmployeeSearchResponse;
 import com.finalproject.delership.mapper.EmployeeMapper;
 import com.finalproject.delership.service.EmployeeService;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,6 +24,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@Schema(name = "EmployeeController", description = "create/search/view/update/delete")
 public class EmployeeController {
 
     @Autowired

@@ -18,7 +18,7 @@
     </root>
 
     <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/transport-logger.log</file>
+        <file>${LOGS}/delership-logger.log</file>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
         </layout>
