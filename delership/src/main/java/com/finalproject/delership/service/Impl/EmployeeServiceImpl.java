@@ -1,6 +1,7 @@
 package com.finalproject.delership.service.Impl;
 
 import com.finalproject.delership.domain.Employee;
+import com.finalproject.delership.domain.base.ComplexValidationException;
 import com.finalproject.delership.domain.criteria.EmployeeCriteria;
 import com.finalproject.delership.enums.Status;
 import com.finalproject.delership.repository.EmployeeRepository;
@@ -55,7 +56,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee retrieve(Long id) {
         return employeeRepository.findById(id).orElseThrow(()->
-                new EntityNotFoundException(String.format("Employee id (%s) not found", id)));
+                new ComplexValidationException("Employee id (%s) not found", id.toString()));
     }
 
     @Override
@@ -95,7 +96,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
             return employeeRepository.save(employeePersisted.get());
         } else {
-            throw new EntityNotFoundException(String.format("Employee id (%s) not found", employeePersisted.get().getId()));
+            throw new ComplexValidationException("Employee id (%s) not found", employeePersisted.get().getId().toString());
         }
     }
 

@@ -1,7 +1,7 @@
 package com.finalproject.delership.domain;
 
 import com.finalproject.delership.domain.base.CreateModifyAwareBaseEntity;
-import com.finalproject.delership.enums.Status;
+import com.finalproject.delership.enums.*;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,15 +18,25 @@ public class Plane extends CreateModifyAwareBaseEntity {
     private Long id;
 
     private String name;
-    private Integer numberOfPassenger;
-    private String model;
+    private Integer sheet;//numberOfPassenger
+    private String image;
     private String price;
-    private Integer age;
-    private Float flyDistance;
-    private String fuelConsumption;
-    private Integer fuelTankCapacity;
-    private String height;
-    private String length;
-    private String width;
+    private Integer old;//plane age
+    private Float weight;
+    private FuelConsumption fuel;
+    private PlaneSpeed speed;
+    @Column(name = "`range`")
+    private PlaneFlyDistance range;
+    @Column(name = "`primary`")
+    private PlaneType primary;
+
+
+    //private Float flyDistance;
+    //private String fuelConsumption;
+    //private Integer fuelTankCapacity;
+    //private String height;
+    //private String length;
+    //private String width;
+    //private String model;
     private Status status;
 }

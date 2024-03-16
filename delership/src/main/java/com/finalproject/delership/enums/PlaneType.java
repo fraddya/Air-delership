@@ -1,21 +1,22 @@
 package com.finalproject.delership.enums;
 
-public enum GenderType {
-    MALE("Male", "M"),
-    FEMALE("Female", "F"),
-    OTHER("Other", "OT");
+public enum PlaneType {
+
+    PERSONAL("Personal", "P"),
+    BUSINESS("Business", "B"),
+    SPECIALIZED("Specialized", "S");
 
     private String label;
 
     private String value;
 
-    GenderType(String label, String value) {
+    PlaneType(String label, String value) {
         this.label = label;
         this.value = value;
     }
 
-    public static GenderType getEnum(String s) {
-        for (GenderType item : GenderType.values()) {
+    public static PlaneType getEnum(String s) {
+        for (PlaneType item : PlaneType.values()) {
             if (item.value.equals(s)) {
                 return item;
             }

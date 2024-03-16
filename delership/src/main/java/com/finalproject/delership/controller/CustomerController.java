@@ -11,6 +11,7 @@ import com.finalproject.delership.dto.response.customer.CustomerCreateResponse;
 import com.finalproject.delership.dto.response.customer.CustomerSearchResponse;
 import com.finalproject.delership.mapper.CustomerMapper;
 import com.finalproject.delership.service.CustomerService;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,6 +24,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@Schema(name = "CustomerController", description = "create/search/view/update/delete")
 public class CustomerController {
 
     @Autowired
