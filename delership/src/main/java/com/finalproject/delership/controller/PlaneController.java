@@ -23,7 +23,6 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@Schema(name = "PlaneController", description = "create/search/view/update/delete")
 public class PlaneController {
 
     @Autowired

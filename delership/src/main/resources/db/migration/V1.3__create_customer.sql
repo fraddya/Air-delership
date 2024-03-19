@@ -1,0 +1,17 @@
+create table customer
+(id bigint not null auto_increment,
+ status varchar(10),
+created_by bigint,
+last_modified_by bigint,
+created_date date,
+created_at datetime(6),
+last_modified_at datetime(6),
+first_name varchar(100),
+last_name varchar(100),
+contact_no varchar(100),
+age int,
+gender_type varchar(100),
+nic varchar(100),
+email varchar(200),
+country varchar(200),
+ primary key (id)) engine=InnoDB AUTO_INCREMENT=1;
